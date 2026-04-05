@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "midl-parser"
+version = "0.1.0"
+description = "A complete parser for Microsoft Interface Definition Language (MIDL/IDL) files"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    {name = "osy"},
+]
+keywords = ["midl", "idl", "parser", "com", "rpc", "windows", "directx"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Compilers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/osy/midl-parser"
+Repository = "https://github.com/osy/midl-parser"
+Issues = "https://github.com/osy/midl-parser/issues"
+
+[project.scripts]
+midl-dump = "midl_parser._cli:main"
+
+[tool.setuptools.packages.find]
+include = ["midl_parser*"]
+
+[tool.setuptools.package-data]
+midl_parser = ["py.typed"]
